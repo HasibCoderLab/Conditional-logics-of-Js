@@ -37,38 +37,38 @@ marks.forEach(student => {
 
  
  // ====================   2nd Task 👇👇👇👇👇 ===============
-  
+
  const products = [
-     { name: "Laptop", category: "Electronics", price: 45000 },
-     { name: "Mobile", category: "Electronics", price: 15000 },
-     { name: "Book", category: "Stationary", price: 500 },
-     { name: "Pen", category: "Stationary", price: 50 },
-     { name: "Table", category: "Furniture", price: 700 },
- ];
- 
- 
- const filterAffordableProducts =  () =>{
-     let affordableProducts  =  [] ;
-     let expensiveFound = false
- 
- 
-     products.forEach(product =>{
-         if (product.price > 10000) {
-             expensiveFound = true; 
-         }else if (product.price < 1000){
-             affordableProducts.push({
-                 ...product,
-                 note:"Affordable product",
-             }) 
-         }
-     })
-     if (expensiveFound) {
-         console.warn("Warning: Some products are very expensive!");
-         
-     }
-     return affordableProducts
- 
- console.log(filterAffordableProducts());
+    { name: "Laptop", category: "Electronics", price: 45000 },
+    { name: "Mobile", category: "Electronics", price: 15000 },
+    { name: "Book", category: "Stationary", price: 500 },
+    { name: "Pen", category: "Stationary", price: 50 },
+    { name: "Table", category: "Furniture", price: 700 },
+];
+
+const filterAffordableProducts = () => {
+    let affordableProducts = [];
+    let expensiveFound = false;
+
+    products.forEach(product => {
+        if (product.price > 10000) {
+            expensiveFound = true;
+        } else if (product.price < 1000) {
+            affordableProducts.push({
+                ...product,
+                note: "Affordable product",
+            });
+        }
+    });
+
+    if (expensiveFound) {
+        console.warn("Warning: Some products are very expensive!");
+    }
+    
+    return affordableProducts;
+};
+
+console.log(filterAffordableProducts());
  
  
  
