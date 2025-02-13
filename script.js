@@ -73,76 +73,39 @@ console.log(filterAffordableProducts());
  
  
  // ====================   3rd Task 👇👇👇👇👇 ===============
- const Employees = [
-     { name: "Alice", salary: 50000, performanceRating: "Excellent" },
-     { name: "Bob", salary: 40000, performanceRating: "Good" },
-     { name: "Charlie", salary: 30000, performanceRating: "Average" },
-     { name: "Dave", salary: 20000, performanceRating: "Poor" },
- ];
- 
- const CalculateBonus = (Employees) => {
-     return Employees.map(employee => {
-         let bonus = 0;
- 
-         if (employee.performanceRating === "Excellent") {
-             bonus = employee.salary * 0.20;
-         } else if (employee.performanceRating === "Good") {
-             bonus = employee.salary * 0.10;
-         } else if (employee.performanceRating === "Average") {
-             bonus = employee.salary * 0.05;
-         } else if (employee.performanceRating === "Poor") {
-             bonus = 0;
-         }
- 
-         return {
-             name: employee.name,
-             salary: employee.salary,
-             bonus: bonus,
-             totalSalary: employee.salary + bonus,
-         };
-     });
- };
- 
- console.log(CalculateBonus(Employees));
- 
- 
- // ====================   4th Task 👇👇👇👇👇 ===============
- 
  
  const employees = [
-     { name: "Alice", salary: 50000, performanceRating: "Excellent" },
-     { name: "Bob", salary: 40000, performanceRating: "Good" },
-     { name: "Charlie", salary: 30000, performanceRating: "Average" },
-     { name: "Dave", salary: 20000, performanceRating: "Poor" },
- ];
- 
- const calculateBonus = (employees) => {
-     return employees.map(employee => {
-         let bonus = 0;
- 
-         if (employee.performanceRating === "Excellent") {
-             bonus = employee.salary * 0.20;
-         } else if (employee.performanceRating === "Good") {
-             bonus = employee.salary * 0.10;
-         } else if (employee.performanceRating === "Average") {
-             bonus = employee.salary * 0.05;
-         } else if (employee.performanceRating === "Poor") {
-             bonus = 0;
-         }
- 
-         return { 
-             name: employee.name, 
-             salary: employee.salary, 
-             bonus, 
-             performanceRating: employee.performanceRating 
-         };
-     });
- };
- 
- const results = calculateBonus(employees);
- 
- 
- results.forEach(employee => {
-     console.log(`${employee.name}: Rating - ${employee.performanceRating}, Bonus - ${employee.bonus}`)
- }
+    { name: "Alice", salary: 50000, performanceRating: "Excellent" },
+    { name: "Bob", salary: 40000, performanceRating: "Good" },
+    { name: "Charlie", salary: 30000, performanceRating: "Average" },
+    { name: "Dave", salary: 20000, performanceRating: "Poor" },
+];
+
+const calculateBonus = (employees) => {
+    return employees.map(employee => {
+        let bonus = 0;
+
+        if (employee.performanceRating === "Excellent") {
+            bonus = employee.salary * 0.20;
+        } else if (employee.performanceRating === "Good") {
+            bonus = employee.salary * 0.10;
+        } else if (employee.performanceRating === "Average") {
+            bonus = employee.salary * 0.05;
+        }
+
+        return { 
+            name: employee.name, 
+            salary: employee.salary, 
+            bonus, 
+            performanceRating: employee.performanceRating 
+        };
+    });
+};
+
+const results = calculateBonus(employees);
+
+results.forEach(employee => {
+    console.log(`${employee.name}: Rating - ${employee.performanceRating}, Bonus - ${employee.bonus}`);
+});
+
  
